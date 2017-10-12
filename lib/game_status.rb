@@ -36,3 +36,25 @@ def full?(board)
   end
   return full
 end
+
+def over?(board)
+  if won?(board) != nil || draw?(board) == true
+    return true
+  else
+    return false
+  end
+end
+
+def draw?(board)
+  fill = full?(board)
+  won = won?(board)
+  if full == false
+    return false
+  elsif full == true && won != nil
+    return false
+  else return true
+  end
+end
+
+
+    
