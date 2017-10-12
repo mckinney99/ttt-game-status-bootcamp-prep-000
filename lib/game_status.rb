@@ -24,10 +24,8 @@ def won?(board)
       true
     elsif board[win1] == "O" && board[win2] == "O" && board[win3] == "O"
       true
-    else 
+    else
       false
     end
   end
 end
-
-      
