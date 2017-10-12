@@ -16,10 +16,18 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.each do |combo|
-    if combo[1] == "X" && combo[2] == "X" && combo[3] == "X"
-      return += "#{WIN_COMBINATIONS}"
-    else
+  WIN_COMBINATIONS.detect do |winning_array|
+    win1 = winning_array[0]
+    win2 = winning_array[1]
+    win3 = winning_array[2]
+    if board[win1] == "X" && board[win2] == "X" && board[win3] == "X"
+      true
+    elsif board[win1] == "O" && board[win2] == "O" && board[win3] == "O"
+      true
+    else 
       false
     end
   end
+end
+
+      
